@@ -33,6 +33,7 @@ jobs:
           cp index.html _site/index.html
           cp politica-de-privacidade.html _site/politica-de-privacidade.html
           cp -r img _site/img
+          cp -r variacoes _site/variacoes
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
