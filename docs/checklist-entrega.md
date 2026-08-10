@@ -44,7 +44,7 @@ Rodado sobre `previews/dr-rodrigo-pires.html` publicado no GitHub Pages, após i
 - [x] Intervencionismo da Dor e Medicina Esportiva apresentados como pos-graduacao, nao como especialidade.
 - [x] Sem numeros ou claims tecnicos sem fonte.
 - [x] Icones seguem `docs/repertorio-icones.md`: contact sheet gerado, revisado a 32px, arquivos organizados por regiao. Nenhum icone escolhido apenas por nome.
-- [ ] **Politica de privacidade** linkada no rodape aponta para `#politica` (placeholder). Precisa apontar para URL real na producao.
+- [x] **Politica de privacidade** publicada e linkada no rodape. Conteudo deve permanecer sujeito a validacao do consultorio antes de campanhas.
 
 ## Spec google-ads.md
 

@@ -822,6 +822,7 @@
     .consent-copy { max-width: 460px; }
     .consent-copy strong { display: block; margin-bottom: 4px; font-size: 14px; }
     .consent-copy p { margin: 0; color: rgba(255,255,255,0.78); font-size: 12px; line-height: 1.5; }
+    .consent-copy a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
     .consent-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
     .consent-actions button {
       min-height: 42px;
@@ -893,7 +894,7 @@
   <section id="consent-banner" class="consent-banner" aria-labelledby="consent-title" role="region">
     <div class="consent-copy">
       <strong id="consent-title">Sua privacidade</strong>
-      <p>Usamos cookies essenciais para o funcionamento da página. Com sua autorização, também usamos cookies de medição e publicidade para melhorar a comunicação.</p>
+      <p>Usamos cookies essenciais para o funcionamento da página. Com sua autorização, também usamos cookies de medição e publicidade para melhorar a comunicação. Consulte a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
     </div>
     <div class="consent-actions">
       <button class="consent-essential" type="button" data-consent-choice="essential">Usar apenas essenciais</button>
@@ -1277,7 +1278,7 @@
     <div class="footer-bottom">
       <span>© 2026 Dr. Rodrigo Pires · CRM/DF 22900 · RQE 18477</span>
       <span>
-        <a href="#politica">Política de Privacidade</a> &nbsp;·&nbsp;
+        <a href="politica-de-privacidade.html">Política de Privacidade</a> &nbsp;·&nbsp;
         Desenvolvido por Pulso Marketing Médico
       </span>
     </div>
@@ -1358,6 +1359,8 @@
       try {
         if (localStorage.getItem(consentKey)) banner.hidden = true;
       } catch (error) {}
+
+      if (window.location.hash === '#consentimento') window.reopenConsent();
 
       banner.querySelectorAll('[data-consent-choice]').forEach(function(button) {
         button.addEventListener('click', function() { setConsent(button.dataset.consentChoice); });
